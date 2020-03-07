@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'api',
 
+    'inbound_email',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
@@ -134,3 +135,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+INBOUND_EMAIL_PARSER = 'inbound_email.backends.sendgrid.SendGridRequestParser'
+INBOUND_EMAIL_RESPONSE_200 = True
