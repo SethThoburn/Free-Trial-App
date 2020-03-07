@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'api',
 
     'corsheaders',
-    'inbound_email',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
@@ -140,8 +139,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-INBOUND_EMAIL_PARSER = 'inbound_email.backends.sendgrid.SendGridRequestParser'
-INBOUND_EMAIL_RESPONSE_200 = True
 django_heroku.settings(locals())
 
 CORS_ORIGIN_ALLOW_ALL = True
