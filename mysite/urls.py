@@ -5,5 +5,5 @@ from .api import router
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
-    path('', include('api.urls')),
+    path('api/v1/', include('api.urls')),
 ]
