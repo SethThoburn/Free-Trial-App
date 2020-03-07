@@ -143,3 +143,5 @@ REST_FRAMEWORK = {
 INBOUND_EMAIL_PARSER = 'inbound_email.backends.sendgrid.SendGridRequestParser'
 INBOUND_EMAIL_RESPONSE_200 = True
 django_heroku.settings(locals())
+
+CORS_ORIGIN_ALLOW_ALL = True
