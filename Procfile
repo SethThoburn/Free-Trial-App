@@ -1,1 +1,1 @@
-web: gunicorn free-trial-app-backend.wsgi --log-file - --timeout 300
+web: gunicorn myditr.wsgi --log-file - --timeout 300
