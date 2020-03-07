@@ -25,7 +25,9 @@ SECRET_KEY = 'mawppxa32#n8v3uc5c8n@d3afr5s9*f^d^&y1-(z48epaksi)8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+]
 
 
 # Application definition
