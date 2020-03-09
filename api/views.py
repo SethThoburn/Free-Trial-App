@@ -5,7 +5,7 @@ from .models import Trial
 
 def email(request):
     if request.method == 'POST':
-        subject = request.POST['subject']
+        subject = request.POST.get('subject', '')
         Trial.objects.create(
             name = subject,
             period = 30,
