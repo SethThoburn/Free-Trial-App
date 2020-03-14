@@ -142,3 +142,14 @@ REST_FRAMEWORK = {
 django_heroku.settings(locals())
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google-chrome'
+
+try:
+    from .settings_local import *
+except ModuleNotFoundError:
+    pass

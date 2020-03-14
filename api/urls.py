@@ -26,4 +26,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('rest-auth/', include('rest_auth.urls')),
     path('emails', views.email),
+    path('amazon-trial', views.amazon_trial),
+    path('captcha', views.captcha),
+    path('cancel-hulu-trial', views.cancel_hulu_trial),
 ]
