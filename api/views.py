@@ -77,14 +77,15 @@ def cancel_hulu_trial(request):
     email = request.POST['email']
     password = request.POST['password']
 
-    LOGIN_URL = 'https://auth.hulu.com/web/login'
-    CANCEL_URL = 'https://secure.hulu.com/account/cancel'
+    LOGIN_URL = 'https://auth.hulu.com/web/login?next=https://secure.hulu.com/account/cancel'
+    # CANCEL_URL = 'https://secure.hulu.com/account/cancel'
     driver.get(LOGIN_URL)
     driver.find_element_by_id('email_id').send_keys(email)
     driver.find_element_by_id('password_id').send_keys(password)
     driver.find_element_by_css_selector('.login-button.jsx-1761454348').click()
     driver.implicitly_wait(10)
-    driver.get(CANCEL_URL)
+    # driver.get(CANCEL_URL)
+    driver.find_element_by_css_selector('.Button--cta').click()
     driver.find_element_by_css_selector('label[for="survey-other"]').click()
     driver.find_element_by_css_selector('.Button--cta').click()
     # driver.find_element_by_xpath("//*[contains(text(), 'Cancel Subscription')]").click()
